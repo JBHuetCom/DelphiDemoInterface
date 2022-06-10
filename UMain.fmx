@@ -13,17 +13,17 @@ object FormMain: TFormMain
     Position.X = 16.000000000000000000
     Position.Y = 64.000000000000000000
     Text = '2'#232'me valeur enti'#232're'
-    TabOrder = 2
+    TabOrder = 0
   end
   object lbl2: TLabel
     Position.X = 16.000000000000000000
     Position.Y = 16.000000000000000000
     Text = '1'#232're valeur enti'#232're'
-    TabOrder = 0
+    TabOrder = 2
   end
   object edtVal1: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 4
+    TabOrder = 1
     FilterChar = '0123456789'
     Position.X = 136.000000000000000000
     Position.Y = 16.000000000000000000
@@ -39,7 +39,7 @@ object FormMain: TFormMain
     Position.X = 64.000000000000000000
     Position.Y = 168.000000000000000000
     Text = 'r'#233'sultat du calcul'
-    TabOrder = 1
+    TabOrder = 6
   end
   object jbhBtnAddition: TButton
     Position.X = 16.000000000000000000
@@ -47,7 +47,7 @@ object FormMain: TFormMain
     Size.Width = 89.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 6
+    TabOrder = 4
     Text = 'Addition'
     OnClick = ExecuteCalcul
   end

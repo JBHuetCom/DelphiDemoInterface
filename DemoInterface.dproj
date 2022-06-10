@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{78291F26-B775-42EC-8B51-8146E2502B64}</ProjectGuid>
+        <ProjectGuid>{461CFDFB-EB09-4C51-8714-4527AE40F2D0}</ProjectGuid>
         <ProjectVersion>19.2</ProjectVersion>
         <FrameworkType>FMX</FrameworkType>
         <Base>True</Base>
@@ -166,6 +166,8 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -189,14 +191,14 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="UMain.pas">
-            <Form>FormMain</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
         <DCCReference Include="UICalcul.pas"/>
         <DCCReference Include="UTAddition.pas"/>
         <DCCReference Include="UTMultiplication.pas"/>
         <DCCReference Include="UTMultiplicationParAddition.pas"/>
+        <DCCReference Include="UMain.pas">
+            <Form>FormMain</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -217,6 +219,11 @@
                 <Source>
                     <Source Name="MainSource">DemoInterface.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\21.0\bpl\EasyListviewDD270.bpl">MustangPeak EasyListview Designtime Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Composants Microsoft Office 2000 Sample Automation Server Wrapper</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Composants Microsoft Office XP Sample Automation Server Wrapper</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
@@ -237,18 +244,6 @@
                 <DeployFile LocalName="Win32\Debug\DemoInterface.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>DemoInterface.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Win64\Debug\DemoInterface.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win64">
-                        <RemoteName>DemoInterface.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Win64\Debug\DemoInterface.rsm" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win64">
-                        <RemoteName>DemoInterface.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1026,6 +1021,11 @@
             <Platforms>
                 <Platform value="Android">True</Platform>
                 <Platform value="Android64">True</Platform>
+                <Platform value="iOSDevice32">False</Platform>
+                <Platform value="iOSDevice64">False</Platform>
+                <Platform value="iOSSimulator">False</Platform>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="OSX64">False</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
