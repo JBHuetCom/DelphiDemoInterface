@@ -1,0 +1,63 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lbl1: TLabel
+    Position.X = 216.000000000000000000
+    Position.Y = 128.000000000000000000
+    Text = '2'#232'me valeur enti'#232're'
+    TabOrder = 2
+  end
+  object lbl2: TLabel
+    Position.X = 216.000000000000000000
+    Position.Y = 80.000000000000000000
+    Text = '1'#232're valeur enti'#232're'
+    TabOrder = 0
+  end
+  object edtVal1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    FilterChar = '0123456789'
+    Position.X = 336.000000000000000000
+    Position.Y = 80.000000000000000000
+  end
+  object edtVal2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    FilterChar = '0123456789'
+    Position.X = 336.000000000000000000
+    Position.Y = 128.000000000000000000
+  end
+  object lblResultat: TLabel
+    Position.X = 280.000000000000000000
+    Position.Y = 312.000000000000000000
+    Text = 'r'#233'sultat du calcul'
+    TabOrder = 1
+  end
+  object jbhBtnAddition: TButton
+    Position.X = 216.000000000000000000
+    Position.Y = 232.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Addition'
+    OnClick = ExecuteCalcul
+  end
+  object jbhBtnMultiplication: TButton
+    Position.X = 344.000000000000000000
+    Position.Y = 232.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Multiplication'
+    OnClick = ExecuteCalcul
+  end
+end
