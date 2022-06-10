@@ -8,7 +8,7 @@ uses
   FMX.Edit, FMX.Controls.Presentation;
 
 type
-  TForm1 = class(TForm)
+  TFormMain = class(TForm)
     lbl1: TLabel;
     lbl2: TLabel;
     edtVal1: TEdit;
@@ -24,7 +24,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormMain: TFormMain;
 
 implementation
 
@@ -43,7 +43,7 @@ uses
 /// </para>
 /// <para> Chaque calcul est définit dans une classe implémentant l'interface ICalcul.
 /// </para>
-procedure TForm1.ExecuteCalcul(Sender: TObject);
+procedure TFormMain.ExecuteCalcul(Sender: TObject);
   var
     ResultatCalcul : ICalcul;
   begin

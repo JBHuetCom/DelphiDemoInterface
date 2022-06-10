@@ -3,7 +3,7 @@ program DemoInterface;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  UMain in 'UMain.pas' {Form1},
+  UMain in 'UMain.pas' {FormMain},
   UICalcul in 'UICalcul.pas',
   UTAddition in 'UTAddition.pas',
   UTMultiplication in 'UTMultiplication.pas',
@@ -13,6 +13,6 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormMain, FormMain);
   Application.Run;
 end.
